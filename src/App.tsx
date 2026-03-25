@@ -113,9 +113,9 @@ function FollowDialog({ onClose }: { onClose: () => void }) {
 
 // 根据环境自动选择 API 地址
 const getApiUrl = () => {
-  // 生产环境使用 Render 后端地址
+  // 生产环境使用 Vercel API
   if (import.meta.env.PROD) {
-    return 'https://ai-resume-optimizer-api.onrender.com'
+    return ''
   }
   return import.meta.env.VITE_API_URL || 'http://localhost:3001'
 }
